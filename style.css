@@ -1,0 +1,227 @@
+/* Box-sizing reset & base styles */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f1f5f9;
+  color: #1e293b;
+  line-height: 1.5;
+}
+
+header {
+  background-color: #0f172a;
+  color: #ffffff;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+header h1 {
+  margin: 0 0 0.5rem 0;
+}
+
+header p {
+  margin: 0;
+  color: #94a3b8;
+}
+
+main {
+  max-width: 700px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+/* White section cards */
+section {
+  background-color: #ffffff;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+section h2 {
+  margin-top: 0;
+  color: #0f172a;
+}
+
+/* Flexbox form */
+#note-form {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+#note-form label {
+  font-weight: bold;
+}
+
+#note-input {
+  flex: 2 1 200px;
+  padding: 0.5rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 4px;
+}
+
+#note-category {
+  flex: 1 1 120px;
+  padding: 0.5rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 4px;
+}
+
+button {
+  padding: 0.55rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.2s ease, opacity 0.2s ease;
+}
+
+#add-btn {
+  background-color: #2563eb;
+  color: #ffffff;
+}
+
+#add-btn:hover {
+  background-color: #1d4ed8;
+}
+
+#clear-all-btn {
+  background-color: #ef4444;
+  color: #ffffff;
+}
+
+#clear-all-btn:hover {
+  background-color: #dc2626;
+}
+
+/* Error message styled red */
+#error-message {
+  color: #dc2626;
+  font-weight: bold;
+  margin: 0.75rem 0 0 0;
+  min-height: 1.25rem;
+}
+
+/* Search bar & Controls */
+.search-controls {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+#search-input {
+  flex: 1;
+  padding: 0.5rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 4px;
+}
+
+#note-count {
+  font-weight: 500;
+  color: #475569;
+}
+
+/* Notes List & Card styling */
+#notes-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.note-card {
+  padding: 1rem;
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-left-width: 6px;
+  border-left-style: solid;
+}
+
+/* Category borders (teal, dark red, blue) */
+.category-personal {
+  border-left-color: #0d9488; /* teal */
+}
+
+.category-work {
+  border-left-color: #991b1b; /* dark red */
+}
+
+.category-study {
+  border-left-color: #2563eb; /* blue */
+}
+
+.note-content {
+  flex: 1;
+  padding-right: 1rem;
+}
+
+.note-text {
+  margin: 0 0 0.35rem 0;
+  font-size: 1rem;
+  word-break: break-word;
+}
+
+.note-meta {
+  font-size: 0.8rem;
+  color: #64748b;
+  display: flex;
+  gap: 0.75rem;
+}
+
+.note-tag {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.delete-btn {
+  background-color: #fee2e2;
+  color: #b91c1c;
+  border: 1px solid #fecaca;
+  padding: 0.35rem 0.75rem;
+}
+
+.delete-btn:hover {
+  background-color: #fca5a5;
+}
+
+.empty-message {
+  color: #64748b;
+  font-style: italic;
+  padding: 0.5rem 0;
+}
+
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  color: #64748b;
+  font-size: 0.875rem;
+}
+
+/* Media query: stack form controls vertically under 600px */
+@media (max-width: 600px) {
+  #note-form {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .search-controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
